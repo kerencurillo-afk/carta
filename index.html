@@ -116,24 +116,21 @@
             margin-top: -5px;
         }
 
-        /* Estilo de la Carta (Papel Pergamino Cafecito) */
+        /* CORRECCIÓN: El papel de la carta ahora es BLANCO PURO para máxima claridad */
         .letter {
             width: 95%;
             height: 100%;
-            background: #d8c3a5;
-            background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
-            background-size: 100% 2em;
-            border-radius: 1px;
-            box-shadow: inset 0 0 50px rgba(92, 74, 60, 0.3), 0 15px 35px rgba(0,0,0,0.4);
+            background-color: #ffffff; /* Blanco limpio y brillante */
+            border-radius: 4px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
             padding: 55px 50px;
             overflow-y: auto;
-            border-left: 12px solid #bd9b73;
-            border-right: 2px solid #b3926a;
+            border: 1px solid #e3ded6;
             opacity: 0;
             transform: scale(0.9);
             transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
             font-family: 'Playfair Display', serif;
-            font-style: italic; /* Unifica todo el texto en la cursiva itálica de molde */
+            font-style: italic; /* Toda la tipografía en la hermosa cursiva de molde */
         }
 
         .letter.show {
@@ -144,7 +141,7 @@
         /* Configuración de Encabezados y Cierre */
         .letter-header {
             font-size: 1.3rem;
-            color: #362517;
+            color: #2b1c10;
             margin-bottom: 25px;
             font-weight: 600;
         }
@@ -170,7 +167,7 @@
 
         .letter-footer {
             font-size: 1.3rem;
-            color: #362517;
+            color: #2b1c10;
             font-weight: 600;
         }
 
@@ -179,16 +176,16 @@
             display: block;
             text-align: right;
             margin-top: 5px;
-            color: #6e543f;
+            color: #8c703f;
             font-size: 1.5rem;
         }
 
-        /* Barra de desplazamiento estilo vintage */
+        /* Barra de desplazamiento elegante */
         .letter::-webkit-scrollbar {
             width: 6px;
         }
         .letter::-webkit-scrollbar-thumb {
-            background-color: #b3926a;
+            background-color: #e3ded6;
             border-radius: 10px;
         }
     </style>
@@ -208,12 +205,12 @@
             </div>
         </div>
 
-        <!-- La Carta Desplegada Limpia -->
+        <!-- La Carta Desplegada en Papel Blanco Limpio -->
         <div class="letter" id="letter">
             <div class="letter-header">Al Sr. Francisco,</div>
             
             <div class="letter-body">
-                <p>Me encuentro en la penumbra de la noche, incapaz de conciliar el sueño. Se preguntará, amado mío, cuál es el motivo de mi desvelo; la única respuesta radica en que mi mente se rehúsa a apartarse de usted. El recuerdo de la nobleza de sus ojos y la delicadeza de su rostro me acompaña en estas horas silenciosas, despertando en mí el ferviente deseo de conservar mi vida a su dicha. Ruego disculpe mi impertinencia al escribirle a una hora tan intempestiva, mas mi corazón no halla reposo hasta confesarle los pensamientos que lo agitan.</p>
+                <p>Me encuentro en la penumbra de la noche, incapaz de conciliar el sueño. Se preguntará, amado mío, cuál es el motivo de mi desvelo; la única respuesta radica en que mi mente se rehúsa a apartarse de usted. El recuerdo de la nobleza de sus ojos y la delicadeza de su rostro me acompaña en estas horas silenciosas, despertando en mí el ferviente deseo de consagrar mi vida a su dicha. Ruego disculpe mi impertinencia al escribirle a una hora tan intempestiva, mas mi corazón no halla reposo hasta confesarle los pensamientos que lo agitan.</p>
                 
                 <p>Amado mío, su ausencia me resulta una carga difícil de sobrellevar. El sueño me es esquivo porque su imagen gobierna mis pensamientos sin tregua; ¡cuánto desearía esta servidora encontrarse al lado de su amado! Evocar su presencia en la distancia es el deleite más sublime, pues en usted se concentra toda la belleza que el mundo posee. Sin embargo, tal evocación palidece ante la dicha real de contemplarlo: su presencia me infunde el mismo asombro que un atardecer de estío sobre un prado cubierto de flores silvestres.</p>
                 
