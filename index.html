@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una Misiva Privada</title>
+    <!-- Carga de las fuentes elegantes oficiales para el proyecto -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
@@ -22,11 +23,11 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
             perspective: 1000px;
         }
 
-        /* Pantalla de Bloqueo de Seguridad Ultra Privada */
+        /* Pantalla de Bloqueo de Seguridad Privada */
         #lockScreen {
             position: fixed;
             top: 0;
@@ -98,15 +99,14 @@
             font-style: italic;
         }
 
-        /* Contenedor de la Carta (Oculto hasta poner la clave) */
+        /* Contenedor Principal con su imagen local paisaje.jpeg */
         #mainContent {
             display: none;
             width: 100%;
             height: 100vh;
             justify-content: center;
             align-items: center;
-            /* El hermoso paisaje real de Orgullo y Prejuicio se carga desde internet de forma segura */
-            background: url('https://unsplash.com') no-repeat center center fixed;
+            background: url('paisaje.jpeg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -117,7 +117,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(40, 30, 20, 0.3);
+            background: rgba(40, 30, 20, 0.25);
             backdrop-filter: blur(4px);
             z-index: 1;
         }
@@ -133,7 +133,7 @@
             z-index: 2;
         }
 
-        /* Sobre Marfil Texturizado */
+        /* Sobre Marfil Satinado de la referencia */
         .envelope {
             position: absolute;
             width: 100%;
@@ -191,12 +191,11 @@
             font-family: 'Pinyon Script', cursive;
             font-size: 3.8rem;
             color: #5c4724;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
             user-select: none;
             margin-top: -5px;
         }
 
-        /* Estilo de la Carta (Papel Pergamino Café Clásico) */
+        /* Estilo de la Carta (Papel Cafecito Pergamino Texturizado) */
         .letter {
             width: 95%;
             height: 100%;
@@ -213,7 +212,7 @@
             transform: scale(0.9);
             transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
             font-family: 'Playfair Display', serif;
-            font-style: italic;
+            font-style: italic; /* Unifica todo el manuscrito en cursiva itálica de molde */
         }
 
         .letter.show {
@@ -221,14 +220,7 @@
             transform: scale(1);
         }
 
-        .letter-top-note {
-            font-size: 1.1rem;
-            color: #5c4a3c;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
+        /* Configuración de Encabezados y Cierre */
         .letter-header {
             font-size: 1.3rem;
             color: #362517;
@@ -253,7 +245,6 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 12px;
         }
 
         .letter-footer {
@@ -262,11 +253,7 @@
             font-weight: 600;
         }
 
-        .rose-icon {
-            font-size: 1.5rem;
-            font-style: normal;
-        }
-
+        /* Detalle del corazón decorativo final */
         .heart-icon {
             display: block;
             text-align: right;
@@ -275,6 +262,7 @@
             font-size: 1.5rem;
         }
 
+        /* Barra de desplazamiento estilo vintage */
         .letter::-webkit-scrollbar {
             width: 6px;
         }
@@ -296,14 +284,15 @@
         </div>
     </div>
 
-    <!-- Contenido Principal Protegido -->
+    <!-- Contenido Protegido -->
     <div id="mainContent">
-        <!-- Banda sonora oficial de piano en bucle infinito integrada desde la red de respaldo -->
+        <!-- Archivo de música local configurado con repetición infinita -->
         <audio id="bgMusic" loop>
-            <source src="https://soundhelix.com" type="audio/mp3">
+            <source src="musica.mp3" type="audio/mp3">
         </audio>
 
         <div class="container">
+            <!-- El Sobre Cerrado Estilo Marfil -->
             <div class="envelope" id="envelope" onclick="openLetter()">
                 <div class="envelope-title">Al Sr. Francisco</div>
                 <div class="wax-seal">
@@ -311,6 +300,7 @@
                 </div>
             </div>
 
+            <!-- La Carta Desplegada Limpia -->
             <div class="letter" id="letter">
                 <div class="letter-header">Al Sr. Francisco,</div>
                 
@@ -326,6 +316,7 @@
                     <p>Usted es el único objeto de mis deseos; solo bajo su cuidado podría hallar la verdadera felicidad. Confío en que recibirá estas líneas con benevolencia y, si mi audacia no lo ofende, guardo la ilusión de ser favorecida con una muestra de su afecto.</p>
                 </div>
                 
+                <!-- Cierre limpio de la firma sin elementos extra -->
                 <div class="letter-footer-container">
                     <div class="letter-footer">Su amada, Keren</div>
                 </div>
@@ -344,10 +335,9 @@
         const letter = document.getElementById('letter');
         const bgMusic = document.getElementById('bgMusic');
 
-        // Función para validar la contraseña privada
+        // FUNCIÓN DE SEGURIDAD CON CLAVE: 'te amo'
         function checkPassword() {
-            // AQUÍ PUEDE CAMBIAR LA CLAVE: Actualmente es 'Francisco2026'
-            if (passwordInput.value === 'Francisco2026') {
+            if (passwordInput.value.toLowerCase().trim() === 'te amo') {
                 lockScreen.style.opacity = '0';
                 setTimeout(() => {
                     lockScreen.style.display = 'none';
@@ -359,19 +349,19 @@
             }
         }
 
-        // Permitir validar la contraseña presionando la tecla Enter
+        // Permite validar la clave al presionar la tecla Enter
         passwordInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 checkPassword();
             }
         });
 
-        // Función para abrir la carta e iniciar la música instrumental
+        // Abre el sobre e inicia la melodía de fondo automáticamente en bucle
         function openLetter() {
             envelope.classList.add('open');
             letter.classList.add('show');
             bgMusic.play().catch(error => {
-                console.log("La melodía en bucle se activará de forma automática.");
+                console.log("La melodía en bucle se activará tras interactuar con la pantalla.");
             });
         }
     </script>
